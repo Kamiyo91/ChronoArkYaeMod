@@ -25,6 +25,7 @@ namespace YaeMod21341
                 BattleSystem.DelayInput(PassiveAttack(skill, Targets[0]));
                 return;
             }
+
             list = (from x in list
                 orderby x.HP
                 select x).ToList();

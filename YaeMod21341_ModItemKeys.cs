@@ -21,6 +21,7 @@ namespace YaeMod21341
         public static string SkillEffect_SE_S_S_Yae_21341_8 = "SE_S_S_Yae_21341_8";
         public static string SkillEffect_SE_T_S_Yae_21341_0 = "SE_T_S_Yae_21341_0";
         public static string SkillEffect_SE_T_S_Yae_21341_1 = "SE_T_S_Yae_21341_1";
+        public static string SkillEffect_SE_T_S_Yae_21341_1_0 = "SE_T_S_Yae_21341_1_0";
         public static string SkillEffect_SE_T_S_Yae_21341_2 = "SE_T_S_Yae_21341_2";
         public static string SkillEffect_SE_T_S_Yae_21341_3 = "SE_T_S_Yae_21341_3";
         public static string SkillEffect_SE_T_S_Yae_21341_4 = "SE_T_S_Yae_21341_4";
@@ -39,6 +40,10 @@ namespace YaeMod21341
 		/// If the target has a [Pain] debuff, cast this skill against another Target. If facing one enemy, cast the skill again on the same target. The re-casted skill does half damage.
 		/// </summary>
         public static string Skill_S_Yae_21341_1 = "S_Yae_21341_1";
+		/// <summary>
+		/// Approach
+		/// </summary>
+        public static string Skill_S_Yae_21341_1_0 = "S_Yae_21341_1_0";
 		/// <summary>
 		/// Blade Draw
 		/// If Critical restore 1 Mana.
@@ -78,16 +83,12 @@ namespace YaeMod21341
 		/// <summary>
 		/// Yae
 		/// Passive:
-		/// If the target has a pending attack with action count > 1 / <= 1, deal 1 / 3 additional damage.
-		/// On Kill remove overload.
-		/// Once per turn, on taking damage attack the attacker with one random card from the deck.
+		/// If the user is at Death's Door, deal 5 additional Damage.
+		/// On kill remove overload.
+		/// Resist Faint from Pain Damage once and Resist Faint from Damage once. (reset at the start of each battle)
+		/// Once per turn, on taking damage attack the attacker with one random skill of Yae's skills.
 		/// </summary>
         public static string Character_Yae21341 = "Yae21341";
-		/// <summary>
-		/// Approach
-		/// </summary>
-        public static string Skill_S_Yae_21341_1_0 = "S_Yae_21341_1_0";
-        public static string SkillEffect_SE_T_S_Yae_21341_1_0 = "SE_T_S_Yae_21341_1_0";
 
     }
 
