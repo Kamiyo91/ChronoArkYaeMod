@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using GameDataEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -14,10 +13,10 @@ namespace YaeMod21341
     ///     Once per turn, on taking damage attack the attacker with one random card from the deck.
     /// </summary>
     public class P_Yae21341 : Passive_Char, IP_Kill, IP_PlayerTurn, IP_Hit, IP_PainDeathEscape, IP_BattleStart_Ones,
-        IP_DamageChange, IP_DeadResist
+        IP_DeadResist
     {
         private static readonly List<string> SkillKeys = new List<string>
-            { "S_Yae_21341_0", "S_Yae_21341_1", "S_Yae_21341_2", "S_Yae_21341_4", "S_Yae_21341_5", "S_Yae_21341_7" };
+            { "S_Yae_21341_0", "S_Yae_21341_1", "S_Yae_21341_2", "S_Yae_21341_5" };
 
         private bool _counter;
         private bool _deadResist;
@@ -27,11 +26,6 @@ namespace YaeMod21341
         {
             _painEscape = false;
             _deadResist = false;
-        }
-
-        public int DamageChange(Skill SkillD, BattleChar Target, int Damage, ref bool Cri, bool View)
-        {
-            return BChar.BuffFind(GDEItemKeys.Buff_B_Neardeath) ? Damage + 5 : Damage;
         }
 
         public bool DeadResist()
@@ -50,6 +44,9 @@ namespace YaeMod21341
             skill.AP = 0;
             skill.Counting = -99;
             skill.NotCount = true;
+            skill.isExcept = true;
+            skill.AutoDelete = 1;
+            BChar.MyTeam.Add(skill.CloneSkill(), true);
             BattleSystem.DelayInput(PassiveAttack(skill, SP.UseStatus));
         }
 

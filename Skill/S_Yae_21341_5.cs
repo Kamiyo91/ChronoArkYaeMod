@@ -10,7 +10,15 @@ namespace YaeMod21341
         public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
             SkillBasePlus.Target_BaseDMG = 0;
-            if (Targets[0] == null || Targets[0].HP > Targets[0].GetStat.maxhp * 0.5f) return;
+            if (Targets[0] == null) return;
+            if (Targets[0].HP <= Targets[0].GetStat.maxhp * 0.75f)
+            {
+                var skill = Skill.TempSkill("S_Yae_21341_5_0", BChar, BChar.MyTeam);
+                skill.isExcept = true;
+                BChar.MyTeam.Add(skill.CloneSkill(), true);
+            }
+
+            if (Targets[0].HP > Targets[0].GetStat.maxhp * 0.5f) return;
             BattleSystem.instance.AllyTeam.AP += 1;
             SkillBasePlus.Target_BaseDMG = 3;
         }
