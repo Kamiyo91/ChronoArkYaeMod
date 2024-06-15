@@ -1,3 +1,5 @@
+using GameDataEditor;
+
 namespace YaeMod21341
 {
     /// <summary>
@@ -8,7 +10,7 @@ namespace YaeMod21341
         public void AttackEffect(BattleChar hit, SkillParticle SP, int DMG, bool Cri)
         {
             if (SP.SkillData != MySkill || !Cri) return;
-            BattleSystem.instance.AllyTeam.AP += 1;
+            hit.BuffAdd(GDEItemKeys.Buff_B_Public_33_T, SP.UseStatus);
         }
     }
 }

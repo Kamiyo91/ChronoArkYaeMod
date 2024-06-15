@@ -1,13 +1,14 @@
+using System.Collections.Generic;
+
 namespace YaeMod21341
 {
     /// <summary>
     ///     Bloodlust
     /// </summary>
-    public class S_Yae_21341_3 : Skill_Extended, IP_SkillUse_Target
+    public class S_Yae_21341_3 : Skill_Extended
     {
-        public void AttackEffect(BattleChar hit, SkillParticle SP, int DMG, bool Cri)
+        public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
-            if (SP.SkillData != MySkill) return;
             BattleSystem.instance.AllyTeam.Draw(1);
         }
     }

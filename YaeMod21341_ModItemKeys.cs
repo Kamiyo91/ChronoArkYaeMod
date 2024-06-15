@@ -46,7 +46,7 @@ namespace YaeMod21341
         public static string Skill_S_Yae_21341_1_0 = "S_Yae_21341_1_0";
 		/// <summary>
 		/// Blade Draw
-		/// If Critical restore 1 Mana.
+		/// If Critical inflict 1 stack of [Bleeding]
 		/// </summary>
         public static string Skill_S_Yae_21341_2 = "S_Yae_21341_2";
 		/// <summary>
