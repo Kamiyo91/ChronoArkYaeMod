@@ -6,7 +6,7 @@ namespace YaeMod21341
 		/// <summary>
 		/// Combat Readiness
 		/// Speed +1. 
-		/// Increase all the enemy count action by 1.
+		/// Increase all enemies action count by 1.
 		/// </summary>
         public static string Buff_B_YaeCombatRead_21341 = "B_YaeCombatRead_21341";
 		/// <summary>

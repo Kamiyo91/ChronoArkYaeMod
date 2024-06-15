@@ -1,14 +1,19 @@
+using System.Collections.Generic;
+
 namespace YaeMod21341
 {
-    public class SkillEn_Yae21341_0 : Skill_Extended, IP_DamageChange
+    public class SkillEn_Yae21341_0 : Skill_Extended
     {
-        public int DamageChange(Skill SkillD, BattleChar Target, int Damage, ref bool Cri, bool View)
+        public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
-            if (SkillD != MySkill) return Damage;
-            if (Damage <= 0) return Damage;
-            var healAmount = Misc.PerToNum(Damage + 5, 25f);
+            SkillBasePlus.Target_BaseDMG = 5;
+        }
+
+        public override void AttackEffectSingle(BattleChar hit, SkillParticle SP, int DMG, int Heal)
+        {
+            if (DMG <= 0) return;
+            var healAmount = Misc.PerToNum(DMG + 5, 25f);
             if (healAmount >= 1) BChar.Heal(BChar, healAmount, false);
-            return Damage + 5;
         }
     }
 }

@@ -10,6 +10,7 @@ namespace YaeMod21341
     {
         private static readonly List<string> SkillKeys = new List<string>
             { "S_Yae_21341_0", "S_Yae_21341_1", "S_Yae_21341_2", "S_Yae_21341_5" };
+
         public void AttackEffect(BattleChar hit, SkillParticle SP, int DMG, bool Cri)
         {
             if (SP.SkillData != MySkill || !Cri) return;
