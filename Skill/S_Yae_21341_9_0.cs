@@ -7,7 +7,7 @@ namespace YaeMod21341
     {
         public override bool TargetSelectExcept(BattleChar ExceptTarget)
         {
-            return ExceptTarget.GetBuffs(BattleChar.GETBUFFTYPE.DOT, false).Count == 0;
+            return ExceptTarget.MyTeam == BattleSystem.instance.AllyTeam || ExceptTarget.GetBuffs(BattleChar.GETBUFFTYPE.DOT, false).Count == 0;
         }
     }
 }
