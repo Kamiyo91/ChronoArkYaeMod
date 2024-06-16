@@ -109,7 +109,7 @@ namespace YaeMod21341
 		/// Passive:
 		/// On kill remove overload.
 		/// Resist Faint from Pain Damage once and Resist Faint from Damage once. (reset at the start of each battle)
-		/// Once per turn, on taking damage attack the attacker with one random skill of Yae's skills and create a copy to add in hand.
+		/// Once per turn, on taking damage attack the attacker with one random skill of Yae's skills.
 		/// </summary>
         public static string Character_Yae21341 = "Yae21341";
 
@@ -117,6 +117,15 @@ namespace YaeMod21341
 
     public static class ModLocalization
     {
+		/// <summary>
+		/// Korean:
+		/// English:
+		/// Haha...Hahahaha...So that's it! I'll protect you, do what you must do Lucy! ... I'm sorry, Sae...
+		/// Japanese:
+		/// Chinese:
+		/// Chinese-TW:
+		/// </summary>
+        public static string ProgramMasterFinalYae21341 => ModManager.getModInfo("YaeMod21341").localizationInfo.SystemLocalizationUpdate("ProgramMasterFinalYae21341");
 
     }
 }

@@ -16,11 +16,13 @@ namespace YaeMod21341
             SkillBasePlus.Target_BaseDMG += 10;
             SkillBasePlus.Target_BaseDMG = Mathf.Clamp(SkillBasePlus.Target_BaseDMG, 0, 50);
         }
+
         public override void Init()
         {
             base.Init();
             OnePassive = true;
         }
+
         public override string DescExtended(string desc)
         {
             return base.DescExtended(desc).Replace("&a", SkillBasePlus.Target_BaseDMG.ToString());

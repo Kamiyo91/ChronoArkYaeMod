@@ -19,6 +19,7 @@ namespace YaeMod21341
                 var buff = BChar.BuffAdd("B_YaeCombatRead_21341", BChar) as B_YaeCombatRead_21341;
                 buff?.CustomInit();
             }
+
             if (!Cri) return;
             var keyword = SkillKeys[Random.Range(0, SkillKeys.Count)];
             var skill = Skill.TempSkill(keyword, BChar, BChar.MyTeam);
