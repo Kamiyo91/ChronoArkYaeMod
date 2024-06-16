@@ -16,18 +16,11 @@ namespace YaeMod21341
             SkillBasePlus.Target_BaseDMG += 10;
             SkillBasePlus.Target_BaseDMG = Mathf.Clamp(SkillBasePlus.Target_BaseDMG, 0, 50);
         }
-
         public override void Init()
         {
             base.Init();
             OnePassive = true;
         }
-
-        public override bool TargetSelectExcept(BattleChar ExceptTarget)
-        {
-            return ExceptTarget.MyTeam == BattleSystem.instance.AllyTeam || ExceptTarget.GetBuffs(BattleChar.GETBUFFTYPE.DOT, false).Count == 0;
-        }
-
         public override string DescExtended(string desc)
         {
             return base.DescExtended(desc).Replace("&a", SkillBasePlus.Target_BaseDMG.ToString());

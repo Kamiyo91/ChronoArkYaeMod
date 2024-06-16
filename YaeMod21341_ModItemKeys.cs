@@ -96,13 +96,12 @@ namespace YaeMod21341
         public static string Skill_S_Yae_21341_8 = "S_Yae_21341_8";
 		/// <summary>
 		/// Red Moon
-		/// Can be used only on enemies that have a [Pain] Debuff. For each [Pain] debuff inflicted on any target by the user increase additional damage of this skill by 10 (Max 50). If the Additional Damage is 50, on use create a weakened copy of this skill.
+		/// For each [Pain] debuff inflicted on any target by the user increase additional damage of this skill by 10 (Max 50). If the Additional Damage is 50, on use create a weakened copy of this skill.
 		/// Total Additonal Damage : &a
 		/// </summary>
         public static string Skill_S_Yae_21341_9 = "S_Yae_21341_9";
 		/// <summary>
 		/// Red Moon
-		/// Can be used only on enemies that have a [Pain] Debuff.
 		/// </summary>
         public static string Skill_S_Yae_21341_9_0 = "S_Yae_21341_9_0";
 		/// <summary>

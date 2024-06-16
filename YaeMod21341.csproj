@@ -3,12 +3,13 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <AssemblyName>YaeMod2134116062024191726</AssemblyName>
+    <AssemblyName>YaeMod2134116062024232400</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <ReferencePath>C:/Program Files (x86)/Steam/steamapps/common/Chrono Ark/ChronoArk_Data/Managed</ReferencePath>
+    <ProjectGuid>{0041AB0D-788D-4F90-BE73-AC793550E7F2}</ProjectGuid>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility">
@@ -383,8 +384,7 @@
     <!-- Extra Reference Start-->
 <!-- Extra Reference End-->
   </ItemGroup>
-  
-                                                                                                                                                                                                                    <!-- Compile ItemGroup Start-->
+    <!-- Compile ItemGroup Start-->
   <ItemGroup>
     <Compile Include="YaeMod21341_ModDefinition.cs" />
     <Compile Include="YaeMod21341_ModItemKeys.cs" />
@@ -404,7 +404,6 @@
     <Compile Include="Skill\S_Yae_21341_7.cs" />
     <Compile Include="Skill\S_Yae_21341_8.cs" />
     <Compile Include="Skill\S_Yae_21341_9.cs" />
-    <Compile Include="Skill\S_Yae_21341_9_0.cs" />
     <Compile Include="SkillExtended\SkillEn_Yae21341_0.cs" />
   </ItemGroup>
   <!-- Compile ItemGroup End-->

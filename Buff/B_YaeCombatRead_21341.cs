@@ -13,7 +13,7 @@ namespace YaeMod21341
             SelfDestroy();
         }
 
-        public override void Init()
+        public void CustomInit()
         {
             if (BattleSystem.instance == null || BattleSystem.instance.EnemyTeam == null) return;
             PlusStat.spd = 1;
