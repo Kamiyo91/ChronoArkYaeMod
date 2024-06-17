@@ -126,6 +126,16 @@ namespace YaeMod21341
 		/// Chinese-TW:
 		/// </summary>
         public static string ProgramMasterFinalYae21341 => ModManager.getModInfo("YaeMod21341").localizationInfo.SystemLocalizationUpdate("ProgramMasterFinalYae21341");
+		/// <summary>
+		/// Korean:
+		/// English:
+		/// Yae
+		/// Thanks, I'll find a use for this.
+		/// Japanese:
+		/// Chinese:
+		/// Chinese-TW:
+		/// </summary>
+        public static string Yae21341GeneralGift => ModManager.getModInfo("YaeMod21341").localizationInfo.SystemLocalizationUpdate("Yae21341GeneralGift");
 
     }
 }

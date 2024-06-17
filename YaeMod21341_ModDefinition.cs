@@ -1,31 +1,34 @@
 using ChronoArkMod;
+using ChronoArkMod.DialogueCreate;
+using ChronoArkMod.ModData;
+using ChronoArkMod.Template;
+using Dialog;
+using Dialogical;
+using NLog.LayoutRenderers.Wrappers;
 
 namespace YaeMod21341
 {
     public class YaeMod21341_ModDefinition : ModDefinition
     {
     }
-    /* //Example
-    public class ExampleSkill : CustomSkillGDE<YaeMod21341_ModDefinition>
-    {
-        public override string Key()
-        {
-            return "ExampleSkill"; //it will override your "ExampleSkill" gdata in the mod editor
-        }
-        public override ModGDEInfo.LoadingType GetLoadingType()
-        {
-            return ModGDEInfo.LoadingType.Add;
-        }
-        public override void SetValue()
-        {
-            PlusSkillView = ModKey<ExampleSkill>();//for ModDefinition gdata
-            User = GDEItemKeys.Character_Azar;//for gdata of orginial game
-            SkillExtended = new List<string> { typeof(ExampleSkill_SkillExtended).AssemblyQualifiedName };//for script
-            //Image_0 = assetInfo.ImageFromAsset("Your AssetBundle Path", "Path in Unity");
-        }
-        public class ExampleSkill_SkillExtended:Skill_Extended
-        {
-
-        }
-    }*/
+    //public class YaeCharacter : CustomCharacterGDE<YaeMod21341_ModDefinition>
+    //{
+    //    public override ModGDEInfo.LoadingType GetLoadingType()
+    //    {
+    //        return ModGDEInfo.LoadingType.Add;
+    //    }
+    //    public override void SetValue()
+    //    {
+    //        Dialogue_NomalGiftTalk = CreateDialogPath<CommonGiftDialog>();
+    //    }
+    //    public string CreateDialogPath<T>() where T : DialogueCreator
+    //    {
+    //        var dialogue = DialogueCreator.CreateDialogueTree<T>();
+    //        return modInfo.assetInfo.ConstructObjectByCode(dialogue);
+    //    }
+    //    public override string Key()
+    //    {
+    //        return "Yae21341";
+    //    }
+    //}
 }
