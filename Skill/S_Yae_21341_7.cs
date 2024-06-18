@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using UnityEngine;
+using _1ChronoArkKamiyoUtil;
 
 namespace YaeMod21341
 {
@@ -14,17 +14,10 @@ namespace YaeMod21341
         public void AttackEffect(BattleChar hit, SkillParticle SP, int DMG, bool Cri)
         {
             if (SP.SkillData != MySkill) return;
-            if (!BChar.BuffFind("B_YaeCombatRead_21341"))
-            {
-                var buff = BChar.BuffAdd("B_YaeCombatRead_21341", BChar) as B_YaeCombatRead_21341;
-                buff?.CustomInit();
-            }
-
+            KamiyoUtil.GetBuff<B_YaeCombatRead_21341>(BChar, nameof(B_YaeCombatRead_21341))?.CustomInit();
             if (!Cri) return;
-            var keyword = SkillKeys[Random.Range(0, SkillKeys.Count)];
-            var skill = Skill.TempSkill(keyword, BChar, BChar.MyTeam);
-            skill.isExcept = true;
-            BChar.MyTeam.Add(skill.CloneSkill(), true);
+            KamiyoUtil.DrawCharacterSkill(BChar,
+                KamiyoUtil.PrepareRandomSkill(BChar, SkillKeys, new KamiyoSkillChangeParameters()));
         }
     }
 }

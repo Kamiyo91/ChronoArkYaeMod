@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using Random = UnityEngine.Random;
+using _1ChronoArkKamiyoUtil;
 
 namespace YaeMod21341
 {
@@ -36,13 +34,8 @@ namespace YaeMod21341
         {
             if (Dmg < 1 || SP.UseStatus.Info.Ally || _counter) return;
             _counter = true;
-            var keyword = SkillKeys[Random.Range(0, SkillKeys.Count)];
-            var skill = Skill.TempSkill(keyword, BChar, BChar.MyTeam);
-            skill.AP = 0;
-            skill.Counting = -99;
-            skill.NotCount = true;
-            skill.isExcept = true;
-            BattleSystem.DelayInput(PassiveAttack(skill, SP.UseStatus));
+            KamiyoUtil.AdditionalAttack(BChar, SP.UseStatus,
+                KamiyoUtil.PrepareRandomSkill(BChar, SkillKeys, new KamiyoSkillChangeParameters(-99, true, -99, 0)));
         }
 
         public void KillEffect(SkillParticle SP)
@@ -60,13 +53,6 @@ namespace YaeMod21341
         public void Turn()
         {
             _counter = false;
-        }
-
-        public IEnumerator PassiveAttack(Skill skill, BattleChar target)
-        {
-            yield return new WaitForSeconds(0.2f);
-            if (BattleSystem.instance.EnemyList.Count != 0)
-                yield return BattleSystem.instance.ForceAction(skill, target, false, false, true);
         }
 
         public override void Init()

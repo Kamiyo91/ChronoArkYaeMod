@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _1ChronoArkKamiyoUtil;
 using GameDataEditor;
 
 namespace YaeMod21341
@@ -20,8 +21,7 @@ namespace YaeMod21341
             (BChar.Info.Passive as P_Yae21341)?.ResetCounter();
             (BChar.Info.Passive as P_Yae21341)?.ResetPainEscapeCount();
             (BChar.Info.Passive as P_Yae21341)?.ResetDeathResist();
-            BChar.BuffAdd("B_YaeRespiteShield_21341", BChar);
-            BChar.BuffReturn("B_YaeRespiteShield_21341").BarrierHP += (int)(BChar.GetStat.maxhp * 0.5f);
+            KamiyoUtil.AddShieldValue(BChar, nameof(B_YaeRespiteShield_21341), (int)(BChar.GetStat.maxhp * 0.5f));
         }
     }
 }

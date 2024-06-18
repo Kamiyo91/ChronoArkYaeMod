@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _1ChronoArkKamiyoUtil;
 using GameDataEditor;
 using UnityEngine;
 
@@ -31,9 +32,8 @@ namespace YaeMod21341
         public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
             if (SkillBasePlus.Target_BaseDMG < 50) return;
-            var skill = Skill.TempSkill("S_Yae_21341_9_0", BChar, BChar.MyTeam);
-            skill.isExcept = true;
-            BChar.MyTeam.Add(skill.CloneSkill(), true);
+            KamiyoUtil.DrawCharacterSkill(BChar,
+                KamiyoUtil.PrepareSkill(BChar, "S_Yae_21341_9_0", new KamiyoSkillChangeParameters()));
         }
     }
 }

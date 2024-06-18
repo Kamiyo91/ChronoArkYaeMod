@@ -1,7 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
+using _1ChronoArkKamiyoUtil;
 
 namespace YaeMod21341
 {
@@ -18,11 +17,8 @@ namespace YaeMod21341
             list.Remove(Targets[0]);
             if (list.Count < 1 && BattleSystem.instance.EnemyList.Count != 0)
             {
-                var skill = Skill.TempSkill("S_Yae_21341_1_0", BChar, BChar.MyTeam);
-                skill.AP = 0;
-                skill.Counting = -99;
-                skill.NotCount = true;
-                BattleSystem.DelayInput(PassiveAttack(skill, Targets[0]));
+                KamiyoUtil.AdditionalAttack(BChar, Targets[0],
+                    KamiyoUtil.PrepareSkill(BChar, "S_Yae_21341_1_0", new KamiyoSkillChangeParameters(-99, true, -99)));
                 return;
             }
 
@@ -30,13 +26,6 @@ namespace YaeMod21341
                 orderby x.HP
                 select x).ToList();
             Targets.Add(list[0]);
-        }
-
-        public IEnumerator PassiveAttack(Skill skill, BattleChar target)
-        {
-            yield return new WaitForSeconds(0.2f);
-            if (BattleSystem.instance.EnemyList.Count != 0)
-                yield return BattleSystem.instance.ForceAction(skill, target, false, false, true);
         }
     }
 }
