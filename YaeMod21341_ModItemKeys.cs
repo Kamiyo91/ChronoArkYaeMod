@@ -78,7 +78,7 @@ namespace YaeMod21341
 		/// </summary>
         public static string Skill_S_Yae_21341_5_0 = "S_Yae_21341_5_0";
 		/// <summary>
-		/// Past Memories
+		/// Pudding Time!
 		/// Restore 3 Mana. Draw *Respite* Skill and draw 1 skill from the deck. (If *Respite* is not present in the deck, draw 2 skills from the deck).
 		/// </summary>
         public static string Skill_S_Yae_21341_6 = "S_Yae_21341_6";
