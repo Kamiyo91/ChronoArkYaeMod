@@ -4,6 +4,7 @@ namespace YaeMod21341
     {
         public int DamageChange(Skill SkillD, BattleChar Target, int Damage, ref bool Cri, bool View)
         {
+            if (BChar.MyTeam == Target.MyTeam) return Damage;
             return Damage + 5;
         }
 
