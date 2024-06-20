@@ -3,7 +3,7 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <AssemblyName>YaeMod2134119062024102641</AssemblyName>
+    <AssemblyName>YaeMod2134119062024235145</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
@@ -385,8 +385,23 @@
       <Private>False</Private>
     </Reference>
     <!-- Extra Reference Start-->
+    <Reference Include="0Harmony">
+      <HintPath>..\..\YaeMod21341\Assemblies\0Harmony.dll</HintPath>
+    </Reference>
     <Reference Include="1ChronoArkKamiyoUtil">
       <HintPath>..\..\YaeMod21341\Assemblies\1ChronoArkKamiyoUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\..\YaeMod21341\Assemblies\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>..\..\YaeMod21341\Assemblies\MonoMod.RuntimeDetour.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>..\..\YaeMod21341\Assemblies\MonoMod.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio">
+      <HintPath>..\..\YaeMod21341\Assemblies\NAudio.dll</HintPath>
     </Reference>
 <!-- Extra Reference End-->
   </ItemGroup>

@@ -1,4 +1,6 @@
+using _1ChronoArkKamiyoUtil;
 using ChronoArkMod.Plugin;
+using System.Collections.Generic;
 
 namespace YaeMod21341
 {
@@ -10,6 +12,7 @@ namespace YaeMod21341
 
         public override void Initialize()
         {
+            KamiyoGlobalModParameters.DialogueTrees.TryAdd("Yae21341", new List<DialogueFinder>());
         }
     }
 }
