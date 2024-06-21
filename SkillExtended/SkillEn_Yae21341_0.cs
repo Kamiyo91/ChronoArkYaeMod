@@ -8,10 +8,12 @@ namespace YaeMod21341
         {
             SkillBasePlus.Target_BaseDMG = 5;
         }
+
         public override bool CanSkillEnforce(Skill MainSkill)
         {
             return !MainSkill.IsHeal;
         }
+
         public override void AttackEffectSingle(BattleChar hit, SkillParticle SP, int DMG, int Heal)
         {
             if (DMG <= 0) return;

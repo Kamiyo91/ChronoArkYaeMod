@@ -11,22 +11,22 @@ namespace YaeMod21341
         private static readonly List<string> SkillKeys = new List<string>
             { "S_Yae_21341_0", "S_Yae_21341_1", "S_Yae_21341_2", "S_Yae_21341_5" };
 
-        public override void Init()
+        public void BuffaddedAfter(BattleChar BuffUser, BattleChar BuffTaker, Buff addedbuff, StackBuff stackBuff)
         {
-            OnePassive = true;
+            BChar.GetBuff<B_YaeCombatRead_21341>(nameof(B_YaeCombatRead_21341))?.CustomInit();
         }
 
         public void AttackEffect(BattleChar hit, SkillParticle SP, int DMG, bool Cri)
         {
             if (SP.SkillData != MySkill) return;
             if (!Cri) return;
-            KamiyoUtil.DrawCharacterSkill(BChar,
-                KamiyoUtil.PrepareRandomSkill(BChar, SkillKeys, new KamiyoSkillChangeParameters()));
+            BChar.DrawCharacterSkill(
+                BChar.PrepareRandomSkill(SkillKeys, new KamiyoSkillChangeParameters()));
         }
 
-        public void BuffaddedAfter(BattleChar BuffUser, BattleChar BuffTaker, Buff addedbuff, StackBuff stackBuff)
+        public override void Init()
         {
-            KamiyoUtil.GetBuff<B_YaeCombatRead_21341>(BChar, nameof(B_YaeCombatRead_21341), false)?.CustomInit();
+            OnePassive = true;
         }
     }
 }

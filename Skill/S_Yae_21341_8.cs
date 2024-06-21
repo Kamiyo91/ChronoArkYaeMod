@@ -21,7 +21,7 @@ namespace YaeMod21341
             (BChar.Info.Passive as P_Yae21341)?.ResetCounter();
             (BChar.Info.Passive as P_Yae21341)?.ResetPainEscapeCount();
             (BChar.Info.Passive as P_Yae21341)?.ResetDeathResist();
-            KamiyoUtil.AddShieldValue(BChar, nameof(B_YaeRespiteShield_21341), (int)(BChar.GetStat.maxhp * 0.5f));
+            BChar.AddShieldValue(nameof(B_YaeRespiteShield_21341), (int)(BChar.GetStat.maxhp * 0.5f));
         }
     }
 }

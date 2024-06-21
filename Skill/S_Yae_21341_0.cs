@@ -12,8 +12,8 @@ namespace YaeMod21341
         public override void SkillUseSingleAfter(Skill SkillD, List<BattleChar> Targets)
         {
             if (!Targets.Any(x => x.GetBuffs(BattleChar.GETBUFFTYPE.DOT, false).Any())) return;
-            KamiyoUtil.DrawCharacterSkill(BChar,
-                KamiyoUtil.PrepareSkill(BChar, "S_Yae_21341_0_1", new KamiyoSkillChangeParameters()), 2);
+            BChar.DrawCharacterSkill(
+                BChar.PrepareSkill("S_Yae_21341_0_1", new KamiyoSkillChangeParameters()), 2);
         }
     }
 }

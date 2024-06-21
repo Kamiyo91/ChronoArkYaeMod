@@ -17,8 +17,8 @@ namespace YaeMod21341
             list.Remove(Targets[0]);
             if (list.Count < 1 && BattleSystem.instance.EnemyList.Count != 0)
             {
-                KamiyoUtil.AdditionalAttack(BChar, Targets[0],
-                    KamiyoUtil.PrepareSkill(BChar, "S_Yae_21341_1_0", new KamiyoSkillChangeParameters(-99, true, -99)));
+                BChar.AdditionalAttack(Targets[0],
+                    BChar.PrepareSkill("S_Yae_21341_1_0", new KamiyoSkillChangeParameters(-99, true, -99)));
                 return;
             }
 

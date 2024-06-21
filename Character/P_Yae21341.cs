@@ -34,8 +34,8 @@ namespace YaeMod21341
         {
             if (Dmg < 1 || SP.UseStatus.Info.Ally || _counter) return;
             _counter = true;
-            KamiyoUtil.AdditionalAttack(BChar, SP.UseStatus,
-                KamiyoUtil.PrepareRandomSkill(BChar, SkillKeys, new KamiyoSkillChangeParameters(-99, true, -99, 0)));
+            BChar.AdditionalAttack(SP.UseStatus,
+                BChar.PrepareRandomSkill(SkillKeys, new KamiyoSkillChangeParameters(-99, true, -99, 0)));
         }
 
         public void KillEffect(SkillParticle SP)

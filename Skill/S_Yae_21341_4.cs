@@ -10,8 +10,8 @@ namespace YaeMod21341
     {
         public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
-            KamiyoUtil.DrawCharacterSkill(BChar,
-                KamiyoUtil.PrepareSkill(BChar, nameof(S_Yae_21341_7), new KamiyoSkillChangeParameters()));
+            BChar.DrawCharacterSkill(
+                BChar.PrepareSkill(nameof(S_Yae_21341_7), new KamiyoSkillChangeParameters()));
         }
     }
 }

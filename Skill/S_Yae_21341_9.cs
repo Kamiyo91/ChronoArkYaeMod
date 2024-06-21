@@ -32,8 +32,8 @@ namespace YaeMod21341
         public override void SkillUseSingle(Skill SkillD, List<BattleChar> Targets)
         {
             if (SkillBasePlus.Target_BaseDMG < 50) return;
-            KamiyoUtil.DrawCharacterSkill(BChar,
-                KamiyoUtil.PrepareSkill(BChar, "S_Yae_21341_9_0", new KamiyoSkillChangeParameters()));
+            BChar.DrawCharacterSkill(
+                BChar.PrepareSkill("S_Yae_21341_9_0", new KamiyoSkillChangeParameters()));
         }
     }
 }
